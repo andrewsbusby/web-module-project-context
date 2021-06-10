@@ -6,7 +6,7 @@ import data from './data';
 import Navigation from './components/Navigation';
 import Products from './components/Products';
 import ShoppingCart from './components/ShoppingCart';
-import ProductContext from './context/ProductContext';
+import {ProductContext} from './context/ProductContext';
 
 function App() {
 	const [products] = useState(data);
@@ -24,7 +24,7 @@ function App() {
 
 			{/* Routes */}
 				<Route exact path="/">
-					<Products products={products} addItem={addItem} />
+					<Products />
 				</Route>
 
 				<Route path="/cart">
